@@ -1,0 +1,14 @@
+tags
+*.txt
+
+# Quartus ignores
+db/
+incremental_db/
+output_files/
+simulation/
+
+# Modelsim ignores
+work/
+transcript
+*.wlf
+*.swp

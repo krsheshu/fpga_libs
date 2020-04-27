@@ -1,6 +1,7 @@
 /*
 
   Simple unsigned shift add multiplier
+  This multiplier has a delay of INPUT BITWIDTH clock cycles
   The product is shifted, hence no need to bit-bloat the inputs
 
 */
