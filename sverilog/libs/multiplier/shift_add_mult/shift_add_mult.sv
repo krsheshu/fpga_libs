@@ -1,6 +1,6 @@
 /*
 
-  Simple shift add multiplier
+  Simple unsigned shift add multiplier
   The product is shifted, hence no need to bit-bloat the inputs
 
 */
@@ -18,7 +18,7 @@ module shift_add_mult #( parameter  WIDTH = 8)
 
 logic                             adden         ; // enable addition
 logic   [$clog2(WIDTH):0]         multcounter   ; // counter for number of shift/adds
-logic   [2*WIDTH-1:0]             adderRes      ;
+logic   [2*WIDTH:0]               adderRes      ;
 
 assign  adden = product[0] & !done;
 
@@ -38,9 +38,9 @@ always @(posedge clk) begin
   if ( start )
       product <= A;   // The multiplier is appended to the LSB
   else if(adden)
-    product <= { 1'b0, adderRes[2*WIDTH-1:1] };
+    product <= { adderRes[2*WIDTH:1]  };
   else if ( !done )
-    product <= { 1'b0,  product[2*WIDTH-1:1] };
+    product <= { 1'b0, product[2*WIDTH-1:1] };
 
 end
 

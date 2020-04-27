@@ -14,7 +14,7 @@ function int run_uS( int time_inuS );
 
 endfunction
 
-module test #(parameter WIDTH = 5) ();
+module test #(parameter WIDTH = 3) ();
 
 bit                     clk       ;
 logic                   start     ;
@@ -40,8 +40,8 @@ initial begin
   start = 0;
 
   #(run_uS(1))  start = 1;
-  A     = 12;
-  B     = 9;
+  A     = 7;
+  B     = 7;
 
   #(run_nS(5 *`CLKPERIOD)) start = 0;
 
