@@ -14,16 +14,18 @@ function int run_uS( int time_inuS );
 
 endfunction
 
-module test #(parameter WIDTH = 3) ();
+module test ();
+
+localparam WIDTH = 8;
 
 bit                     clk       ;
 logic                   start     ;
 logic   [WIDTH-1:0]     A         ;
 logic   [WIDTH-1:0]     B         ;
 logic                   done      ;
-logic   [2*WIDTH:0]     product   ;
+logic   [2*WIDTH-1:0]     product   ;
 
-shift_add_mult #  ( .WIDTH      (WIDTH)   )
+shift_add_mult
            dut    ( .clk        (clk      ),
                     .start      (start    ),
                     .A          (A        ),
