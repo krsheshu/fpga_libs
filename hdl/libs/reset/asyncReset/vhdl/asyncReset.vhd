@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity asyncResetFF is
+entity asyncReset is
     port (
       clk        : in  std_logic;
       asyncrst_n : in  std_logic;
       rst_n      : out std_logic);
-end asyncResetFF;
+end asyncReset;
 
-architecture rtl of asyncResetFF is
+architecture rtl of asyncReset is
   signal rff1 : std_logic;
 begin
 

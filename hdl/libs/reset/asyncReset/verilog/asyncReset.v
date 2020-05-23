@@ -1,4 +1,4 @@
-module async_resetFF(
+module asyncReset(
   output reg rst_n,
   input      clk, asyncrst_n);
 
