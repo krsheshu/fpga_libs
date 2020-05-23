@@ -1,15 +1,18 @@
+
 library ieee;
 use ieee.std_logic_1164.all;
 
 entity asyncReset is
     port (
-      clk        : in  std_logic;
-      asyncrst_n : in  std_logic;
-      rst_n      : out std_logic);
+            clk        : in  std_logic;
+            asyncrst_n : in  std_logic;
+            rst_n      : out std_logic);
 end asyncReset;
 
 architecture rtl of asyncReset is
+
   signal rff1 : std_logic;
+
 begin
 
   process (clk, asyncrst_n)
