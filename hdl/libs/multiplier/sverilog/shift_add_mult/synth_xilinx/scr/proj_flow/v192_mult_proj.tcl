@@ -17,7 +17,7 @@ file mkdir          $outputDir
 # Creating Project
 #------------------------------------------------------------------
 
-create_project cheetah_v1 $outputDir -part xczu4cg-sfvc784-1-e -force
+create_project multProj $outputDir -part xczu4cg-sfvc784-1-e -force
 
 
 #------------------------------------------------------------------
